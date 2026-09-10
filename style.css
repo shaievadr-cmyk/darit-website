@@ -5,6 +5,11 @@
     --text: #000000;
 }
 
+
+/* ========================================
+   ОБЩИЕ НАСТРОЙКИ
+   ======================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -15,7 +20,9 @@ html {
 
 body {
     margin: 0;
+
     font-family: "Poppins", Arial, sans-serif;
+
     color: var(--text);
     background-color: var(--white);
 }
@@ -29,303 +36,519 @@ img {
     max-width: 100%;
 }
 
-/* HEADER */
+
+/* ========================================
+   HEADER
+   ======================================== */
 
 header {
     display: flex;
     align-items: center;
+
     padding: 30px 12%;
+
     background-color: var(--white);
 }
+
+
+/* Логотип */
 
 header > img {
     width: 90px;
     height: auto;
+
     object-fit: contain;
 }
 
+
+/* Контейнер названия и меню */
+
 .menu {
     flex: 1;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
+/* Название DarIT */
+
 .menu > a {
+    margin-bottom: 20px;
+
     color: #B83280;
+
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 20px;
 }
+
+
+/* Меню */
 
 .menu ul {
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     gap: 30px;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
+
+
+/* Элементы меню */
 
 .menu ul li {
     margin: 0;
     padding: 0;
 }
 
+
+/* Ссылки меню */
+
 .menu ul li a {
     color: #000000;
+
     font-size: 18px;
     font-weight: 400;
+
     text-decoration: none;
+
     transition: color 0.2s ease;
 }
+
+
+/* Наведение */
 
 .menu ul li a:hover {
     color: var(--pink);
 }
+
+
+/* Home */
 
 .menu ul li:first-child a {
     color: #B83280;
     text-decoration: underline;
 }
 
-/* HERO */
+
+/* ========================================
+   ПЕРВАЯ СЕКЦИЯ
+   ======================================== */
 
 main > section:first-child {
     padding: 60px 12%;
 }
 
+
+/* Главный заголовок */
+
 main > section:first-child h2 {
     margin-top: 0;
     margin-bottom: 20px;
+
     font-size: 38px;
     line-height: 1.2;
 }
 
+
+/* Главный текст */
+
 main > section:first-child p {
     max-width: 900px;
+
     margin-bottom: 30px;
+
     font-size: 18px;
     line-height: 1.6;
 }
 
+
+/* ========================================
+   КНОПКА JETZT SHOPPEN
+   ======================================== */
+
 #shop {
     display: inline-block;
+
+    padding: 12px 24px;
+
     color: var(--white);
     background-color: var(--pink);
-    padding: 12px 24px;
+
     border: none;
     border-radius: 8px;
+
     font-weight: 600;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
+
 
 #shop:hover {
     transform: translateY(-2px);
+
     opacity: 0.9;
 }
 
-/* NEU & BELIEBT */
+
+/* ========================================
+   NEU & BELIEBT
+   ======================================== */
 
 .new-products {
-    background-color: var(--green);
-    color: var(--white);
     margin-top: 20px;
-    padding: 50px 12%;
+
+    padding: 50px 6%;
+
+    color: var(--white);
+    background-color: var(--green);
 }
+
+
+/* Заголовок Neu & Beliebt */
 
 .new-products h2 {
     margin-top: 0;
     margin-bottom: 30px;
+
     font-size: 32px;
 }
 
+
+/* ========================================
+   КОНТЕЙНЕР ТОВАРОВ
+   ======================================== */
+
 .new-product-card {
-    display: flex;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
     gap: 30px;
-    flex-wrap: wrap;
+
+    width: 100%;
 }
 
+
+/* ========================================
+   ОДНА КАРТОЧКА ТОВАРА
+   ======================================== */
+
 .product-card {
-    flex: 1 1 220px;
-    max-width: 300px;
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
 }
+
+
+/* Изображение */
 
 .product-card img {
     display: block;
+
     width: 100%;
     height: auto;
+
     background-color: var(--white);
+
     transition: transform 0.3s ease;
 }
+
+
+/* Эффект при наведении */
 
 .product-card img:hover {
     transform: scale(1.03);
 }
 
+
+/* Название товара */
+
 .product-card h3 {
     margin-top: 15px;
     margin-bottom: 10px;
+
     font-size: 20px;
     font-weight: 500;
     line-height: 1.3;
 }
 
-.product-card p,
+
+/* Цена */
+
 .product-card .price {
     margin: 0;
+
     font-size: 18px;
 }
 
+
+/* ========================================
+   КНОПКА PRODUKTE ENTDECKEN
+   ======================================== */
+
 .new-products > a {
     display: inline-block;
+
     margin-top: 30px;
+
     padding: 12px 22px;
-    background-color: var(--pink);
+
     color: var(--white);
+    background-color: var(--pink);
+
     border-radius: 8px;
+
     font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
 
-/* KATEGORIEN */
+
+.new-products > a:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+/* ========================================
+   KATEGORIEN
+   ======================================== */
 
 .categories {
     padding: 60px 12%;
 }
 
+
+/* Unsere Auswahl */
+
 .categories h2 {
     margin-top: 0;
     margin-bottom: 30px;
+
     font-size: 38px;
 }
 
+
+/* Контейнер категорий */
+
 .category-list {
     display: flex;
+
     justify-content: center;
+
     gap: 20px;
+
     flex-wrap: wrap;
 }
 
+
+/* Одна категория */
+
 .category {
     position: relative;
+
     display: block;
+
     width: 270px;
+
     overflow: hidden;
 }
 
+
+/* Изображение категории */
+
 .category img {
     display: block;
+
     width: 100%;
     height: auto;
+
     transition: transform 0.3s ease;
 }
+
+
+/* Увеличение при наведении */
 
 .category:hover img {
     transform: scale(1.04);
 }
 
+
+/* Название категории */
+
 .category span {
     position: absolute;
+
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
+
     color: var(--white);
+
     font-size: 36px;
     font-weight: 500;
+
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
-/* RESPONSIVE */
+
+/* ========================================
+   ПЛАНШЕТ
+   ======================================== */
 
 @media (max-width: 1100px) {
+
     header {
         padding: 25px 5%;
     }
+
 
     .menu ul {
         gap: 18px;
     }
 
+
     .menu ul li a {
         font-size: 16px;
     }
 
-    main > section:first-child,
-    .new-products,
+
+    main > section:first-child {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .new-products {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
     .categories {
         padding-left: 5%;
         padding-right: 5%;
     }
 }
 
-@media (max-width: 850px) {
+
+/* ========================================
+   2 ТОВАРА В РЯД
+   ======================================== */
+
+@media (max-width: 900px) {
+
     header {
         flex-direction: column;
+
         gap: 20px;
     }
+
 
     .menu {
         width: 100%;
     }
 
+
     .menu > a {
         text-align: center;
     }
+
 
     .menu ul {
         flex-wrap: wrap;
     }
 
-    .product-card {
-        flex: 1 1 40%;
-        max-width: none;
+
+    .new-product-card {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 600px) {
+
+/* ========================================
+   МОБИЛЬНЫЙ ТЕЛЕФОН
+   ======================================== */
+
+@media (max-width: 500px) {
+
     header {
         padding: 20px;
     }
+
 
     header > img {
         width: 70px;
     }
 
+
     .menu > a {
         font-size: 17px;
     }
+
 
     .menu ul {
         gap: 12px;
     }
 
+
     .menu ul li a {
         font-size: 15px;
     }
+
+
+    /* Первая секция */
+
     main > section:first-child {
         padding: 40px 20px;
     }
+
+
     main > section:first-child h2 {
         font-size: 30px;
     }
+
+
+    /* Товары */
+
     .new-products {
         padding: 40px 20px;
     }
+
+
     .new-product-card {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
-    .product-card {
-        width: 100%;
-        max-width: none;
-    }
+
+
+    /* Категории */
+
     .categories {
         padding: 40px 20px;
     }
+
+
     .category {
         width: 100%;
         max-width: 350px;
     }
+
+
     .category span {
         font-size: 28px;
     }
