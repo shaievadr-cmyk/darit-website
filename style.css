@@ -1,0 +1,212 @@
+:root {
+    --green: #0F766E;
+    --pink: #EC4899;
+    --white: #FFFFFF;
+}
+
+/* Общие настройки */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+header {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* КНОПКА SHOP */
+
+#shop {
+    color: var(--white);
+    background-color: var(--pink);
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    display: inline-block;
+}
+
+
+/* КАТЕГОРИИ */
+
+.categories {
+    margin: 0 100px;
+    padding-top: 50px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category {
+    position: relative;
+    display: block;
+    width: 270px;
+}
+
+.category img {
+    display: block;
+    width: 100%;
+}
+
+.category span {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: var(--white);
+    font-size: 36px;
+}
+
+
+/* НОВЫЕ И ПОПУЛЯРНЫЕ ТОВАРЫ */
+
+.new-products {
+    background-color: var(--green);
+    color: var(--white);
+
+    margin-top: 20px;
+
+    padding: 50px 100px;
+}
+
+.new-products h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+/* Контейнер со всеми товарами */
+
+.product-list {
+    display: flex;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Одна карточка товара */
+
+.product-card {
+    flex: 1 1 220px;
+
+    max-width: 300px;
+}
+
+
+/* Картинка товара */
+
+.product-card img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* Название товара */
+
+.product-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+
+/* Цена */
+
+.product-card p {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+/* Небольшой эффект при наведении */
+
+.product-card img {
+    transition: transform 0.3s;
+}
+
+.product-card img:hover {
+    transform: scale(1.03);
+}
+
+
+/* АДАПТИВНОСТЬ */
+
+/* Планшет */
+
+@media (max-width: 900px) {
+
+    .categories {
+        margin: 0 40px;
+    }
+
+    .new-products {
+        padding: 40px;
+    }
+
+    .product-card {
+        flex: 1 1 40%;
+        max-width: none;
+    }
+}
+
+
+/* Телефон */
+
+@media (max-width: 600px) {
+
+    .categories {
+        margin: 0 20px;
+    }
+
+    .category {
+        width: 100%;
+    }
+
+    .new-products {
+        padding: 30px 20px;
+    }
+
+    .product-list {
+        flex-direction: column;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .category span {
+        font-size: 28px;
+    }
+}
