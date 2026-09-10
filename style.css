@@ -303,37 +303,29 @@ main > section:first-child p {
     .menu ul li a {
         font-size: 15px;
     }
-
     main > section:first-child {
         padding: 40px 20px;
     }
-
     main > section:first-child h2 {
         font-size: 30px;
     }
-
     .new-products {
         padding: 40px 20px;
     }
-
     .new-product-card {
         flex-direction: column;
     }
-
     .product-card {
         width: 100%;
         max-width: none;
     }
-
     .categories {
         padding: 40px 20px;
     }
-
     .category {
         width: 100%;
         max-width: 350px;
     }
-
     .category span {
         font-size: 28px;
     }
